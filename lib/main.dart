@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Guia Comercial PGX',
-
+        theme: ThemeData(
+          primarySwatch: Colors.red,
+        ),
         home:  BaseView());
   }
 }

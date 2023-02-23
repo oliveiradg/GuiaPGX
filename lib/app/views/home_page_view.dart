@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:guia_pgx/components/custom_drawer.dart';
+import 'package:guia_pgx/components/custom_drawer/custom_drawer.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({Key? key}) : super(key: key);
@@ -8,73 +8,27 @@ class HomePageView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
      drawer: const CustomDrawer(),
-      //drawer
-      // drawer: Drawer(
-      //   child: ListView(
-      //     children: <Widget>[
-      //       const UserAccountsDrawerHeader(
-      //         accountName: Text(
-      //           "Joao Oliveira",
-      //           style: TextStyle(
-      //             fontSize: 20,
-      //           ),
-      //         ),
-      //         accountEmail: Text(
-      //           "joao@devflutter.com",
-      //           style: TextStyle(
-      //             fontSize: 16,
-      //           ),
-      //         ),
-      //         currentAccountPicture: CircleAvatar(
-      //           radius: 30.0,
-      //           backgroundImage: NetworkImage(
-      //               'https://avatars.githubusercontent.com/u/65923951?s=96&v=4'),
-      //           backgroundColor: Colors.transparent,
-      //         ),
-      //       ),
-      //       ListTile(
-      //           leading: const Icon(
-      //             Icons.star,
-      //             color: Colors.red,
-      //           ),
-      //           title: const Text("Favoritos"),
-      //           subtitle: const Text("meus favoritos..."),
-      //           trailing: const Icon(
-      //             Icons.arrow_forward,
-      //             color: Colors.red,
-      //           ),
-      //           onTap: () {
-      //             debugPrint('toquei no drawer');
-      //           }),
-      //       ListTile(
-      //           leading: const Icon(
-      //             Icons.account_circle,
-      //             color: Colors.red,
-      //           ),
-      //           title: const Text("Perfil"),
-      //           subtitle: const Text("Perfil do usuário..."),
-      //           trailing: const Icon(
-      //             Icons.arrow_forward,
-      //             color: Colors.red,
-      //           ),
-      //           onTap: () {
-      //             Navigator.pop(context);
-      //           })
-      //     ],
-      //   ),
-      // ),
+      
 
       //appBar
-
+    
       appBar: AppBar(
-        centerTitle: true,
-   
-        title: Image.asset(
-          "assets/images/logo pgx.png",
-          fit: BoxFit.contain,
-          height: 36,
-        ),
-      ),
+          title: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+
+              children: [
+                const  Icon(Icons.location_on, color: Colors.white, size: 32,) ,
+              Container(
+                  padding: const EdgeInsets.all(8.0), child: const Text('Guia PGX', style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold
+                  )),),
+            ],
+
+          ),
+  ),
+      
 
       //body
 
