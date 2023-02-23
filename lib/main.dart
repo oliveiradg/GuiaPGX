@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:guia_pgx/app/views/home_page_view.dart';
+import 'package:guia_pgx/app/views/base_view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Guia Comercial PGX',
-        theme: ThemeData(
-          
-          primaryColor: Colors.red[50],
-          primarySwatch: Colors.yellow,
-        ),
-        home: const HomePageView());
+
+        home:  BaseView());
   }
 }
