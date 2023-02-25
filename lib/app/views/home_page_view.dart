@@ -1,5 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:guia_pgx/components/custom_drawer/custom_drawer.dart';
+import 'package:guia_pgx/components/custom_drawer/custom_drawer_header.dart';
+import 'package:guia_pgx/components/custom_drawer/pages/page_section.dart';
 
 
 class HomePageView extends StatelessWidget {
@@ -62,6 +65,7 @@ final List<Widget> imageSliders = imgList
 
     return Scaffold(
 
+drawer: const CustomDrawer(),
       //appBar
 
       appBar: AppBar(
@@ -88,6 +92,7 @@ final List<Widget> imageSliders = imgList
         ),
       ),
 
+
       //body
 
       body: Container(
@@ -103,7 +108,7 @@ final List<Widget> imageSliders = imgList
         ),
         items: imageSliders,
       )),
-    
+      
     );
   }
 }
