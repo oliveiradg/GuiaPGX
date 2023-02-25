@@ -15,7 +15,7 @@ class BaseView extends StatelessWidget {
         controller: pageController,
         physics: const NeverScrollableScrollPhysics(),
         children: [
-         const  HomePageView(),
+        const   HomePageView(),
           
           Container(
             color: Colors.green,
