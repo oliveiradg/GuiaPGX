@@ -38,17 +38,68 @@ class HomePageView extends StatelessWidget {
 
       //body
 
-      body: Column(
-        children: [
-          Expanded(
+      body: SizedBox(
+        
+        height: 300.0,
+        width: 400.0,
+        child: Column(
+          
+          children: [
+            Expanded(
               child: PageView.builder(
-            itemCount: 4,
-            itemBuilder: (BuildContext _, currentIndex) {
-              return SlideTile();
-            },
-          ))
-        ],
+                itemCount: 4,
+                itemBuilder: (BuildContext _, currentIndex) {
+                  return const SlideTile();
+                },
+              ),
+            ),
+            
+          ],
+        ),
       ),
+    );
+  }
+
+  Widget _buildBullets() {
+    return Padding(
+      padding: const EdgeInsets.all(8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget> [
+        Container(
+          
+          width: 10,
+          height: 10,
+          decoration: const BoxDecoration(
+            color: Colors.red,
+           
+            borderRadius: BorderRadius.all(Radius.circular(30),),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.all(10),
+          width: 10,
+          height: 10,
+          decoration: const BoxDecoration(
+            color: Colors.grey,
+          
+            borderRadius: BorderRadius.all(Radius.circular(30),),
+          ),
+        ),
+        Container(
+          
+          width: 10,
+          height: 10,
+          decoration: const BoxDecoration(
+            color: Colors.grey,
+       
+            borderRadius: BorderRadius.all(Radius.circular(30),),
+          ),
+        ),
+        
+
+        
+      ]),
     );
   }
 }
