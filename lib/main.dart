@@ -14,8 +14,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Guia Comercial PGX',
         theme: ThemeData(
+          scaffoldBackgroundColor: Colors.blue,
           
-          primarySwatch: Colors.blue,
+          primaryColor: Colors.blue,
+          appBarTheme: const AppBarTheme(
+            elevation: 0,
+          ),
         ),
         home:  BaseView());
   }

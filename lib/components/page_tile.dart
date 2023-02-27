@@ -25,7 +25,7 @@ class PageTile extends StatelessWidget {
           fontSize: 16,
         ),
       ),
-      leading: Icon(iconData, color: highLighted ? Colors.black : Colors.red, size: 32),
+      leading: Icon(iconData, color: highLighted ? Colors.black : Colors.blue, size: 32),
       onTap: onTap,
       selected: highLighted,
     );
