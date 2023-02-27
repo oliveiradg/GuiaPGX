@@ -91,6 +91,7 @@ class HomePageView extends StatelessWidget {
       //body
 
       body: Column(
+        
         children: [
           CarouselSlider(
             options: CarouselOptions(
@@ -105,133 +106,302 @@ class HomePageView extends StatelessWidget {
             items: imageSliders,
           ),
           Container(
-              height: 120,
-              width: 390,
-              decoration: const BoxDecoration(
-                
+            height: 120,
+            width: 390,
+            decoration: const BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Card(
+                  color: Colors.blue,
+                  elevation: 2.0,
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                      color: Theme.of(context).colorScheme.outline,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(12)),
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        width: 110,
+                        height: 110,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Icons.local_offer,
+                              color: Colors.white,
+                              size: 32,
+                            ),
+                            Center(
+                              child: Text(
+                                'Cupons',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+                  color: Colors.blue,
+                  elevation: 2.0,
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                      color: Theme.of(context).colorScheme.outline,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(12)),
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        width: 110,
+                        height: 110,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Icons.favorite,
+                              color: Colors.white,
+                              size: 32,
+                            ),
+                            Center(
+                              child: Text(
+                                'Fidelidade',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Card(
+                  color: Colors.blue,
+                  elevation: 2.0,
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                      color: Theme.of(context).colorScheme.outline,
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(12)),
+                  ),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        width: 110,
+                        height: 110,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Icon(
+                              Icons.location_on,
+                              color: Colors.white,
+                              size: 32,
+                            ),
+                            Center(
+                              child: Text(
+                                'Localização',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16.0,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          
+          ),
+            
+            //Menu rápido
+          
+      Container(
+        padding: const EdgeInsets.all(20),
+        child: Column(
+
+                             
+          
+          children:  [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:  [
+               Card(
+                    color: Colors.white,
+                    elevation: 2.0,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        color: Theme.of(context).colorScheme.outline,
+                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(70)),
+                    ),
+                    child: Column(
+
+                      children: [
+                        SizedBox(
+                          width: 80,
+                          height: 80,
+                          child: Column(
+
+                        
+                            
+                            children: const [
+                              Padding(padding: EdgeInsets.all(10)),  
+                              Icon(
+                                Icons.storefront,
+                                color: Colors.blue,
+                                size: 42,
+                              ),
+
+                              
+                            ],
+                          ),
+                        ),
+                        
+                      ],
+                      
+                      
+                    ),
+                    
+                  ),
+               Card(
+                    color: Colors.white,
+                    elevation: 2.0,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        color: Theme.of(context).colorScheme.outline,
+                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(70)),
+                    ),
+                    
+                    
+                    child: Column(
+
+                      children: [
+                        SizedBox(
+                          width: 80,
+                          height: 80,
+                          child: Column(
+                                          
+                            
+                            children: const [
+                              Padding(padding: EdgeInsets.all(10)),  
+                              Icon(
+                                Icons.shopping_cart,
+                                color: Colors.blue,
+                                size: 42,
+                              ),
+                              
+                            ],
+                          ),
+                        ),
+                       
+                      
+                  
+
+                        
+                      ],
+                  
+            
+                      
+                    ),
+                    
+                  ),
+               Card(
+                    color: Colors.white,
+                    elevation: 2.0,
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        color: Theme.of(context).colorScheme.outline,
+                      ),
+                      borderRadius: const BorderRadius.all(Radius.circular(70)),
+                    ),
+                    child: Column(
+
+                      children: [
+                        SizedBox(
+                          width: 80,
+                          height: 80,
+                          child: Column(
+
+                        
+                            
+                            children: const [
+                              Padding(padding: EdgeInsets.all(10)),  
+                              Icon(
+                                Icons.shopify,
+                                color: Colors.blue,
+                                size: 42,
+                              ),
+                              
+                            ],
+                          ),
+                        ),
+                        
+                      ],
+                      
+                      
+                    ),
+                    
+                  ),
+               
+              
+
+              ],
+            )
+
+          
+          ],
+        ),
+      ),  
+      Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        
+        children: const  [
+             Text('Loja', style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
                 color: Colors.blue,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Card(
-                    color: Colors.blue,
-                    elevation: 2.0,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: Theme.of(context).colorScheme.outline,
-                      ),
-                      borderRadius: const BorderRadius.all(Radius.circular(12)),
-                    ),
-                    child: Column(
-                      children:  [
-                        SizedBox(
-                          width: 110,
-                          height: 110,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.local_offer,
-                                color: Colors.white,
-                                size: 32,
-                              ),
-                              Center(
-                                child: Text(
-                                  'Cupons',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Card(
-                    color: Colors.blue,
-                    elevation: 2.0,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: Theme.of(context).colorScheme.outline,
-                      ),
-                      borderRadius: const BorderRadius.all(Radius.circular(12)),
-                    ),
-                    child: Column(
-                      children:  [
-                        SizedBox(
-                          width: 110,
-                          height: 110,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.favorite,
-                                color: Colors.white,
-                                size: 32,
-                              ),
-                              Center(
-                                child: Text(
-                                  'Fidelidade',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Card(
-                    color: Colors.blue,
-                    elevation: 2.0,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        color: Theme.of(context).colorScheme.outline,
-                      ),
-                      borderRadius: const BorderRadius.all(Radius.circular(12)),
-                    ),
-                    child: Column(
-                      children:  [
-                        SizedBox(
-                          width: 110,
-                          height: 110,
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Icon(
-                                Icons.location_on,
-                                color: Colors.white,
-                                size: 32,
-                              ),
-                              Center(
-                                child: Text(
-                                  'Localização',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 16.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+             )),
+
+              Text('Carrinho', style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.blue,
               )),
+              Text('Vender', style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: Colors.blue,
+              )),
+
+      ],),   
         ],
+
+
       ),
+      
+      
     );
   }
 }
