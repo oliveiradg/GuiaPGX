@@ -8,13 +8,15 @@ class CustomDrawerHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (() {
+        Navigator.of(context).pop();
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (_)=> LoginView(),
+          MaterialPageRoute(
+            builder: (_) => const LoginView(),
           ),
         );
       }),
       child: Container(
-      color: Colors.blue,
+        color: Colors.blue,
         height: 95,
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Row(
