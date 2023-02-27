@@ -109,7 +109,7 @@ class HomePageView extends StatelessWidget {
             height: 120,
             width: 390,
             decoration: const BoxDecoration(
-              color: Colors.blue,
+              color: Colors.transparent,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
