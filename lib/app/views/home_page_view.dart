@@ -78,9 +78,9 @@ class HomePageView extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.all(8.0),
-                child: const Text('Guia PGX',
+                child: const Text('Guia Comercial',
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold)),
               ),
               Container(
                 padding: const EdgeInsets.all(35.0),
