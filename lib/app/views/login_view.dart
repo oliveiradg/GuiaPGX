@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:guia_pgx/app/views/sign_up_view.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({Key? key}) : super(key: key);
@@ -146,7 +147,7 @@ class LoginView extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              // Navigator.of(context).push(MaterialPageRoute(builder: ((context) => SignUpView())));
+                               Navigator.of(context).push(MaterialPageRoute(builder: ((context) =>const  SignUpView())));
                             },
                             child: const Text(
                               'Cadastre-se',
