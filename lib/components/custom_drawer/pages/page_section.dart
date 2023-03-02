@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:guia_pgx/app/views/create_view.dart';
+import 'package:guia_pgx/app/views/home_page_view.dart';
 import 'package:guia_pgx/components/page_tile.dart';
 
 class PageSection extends StatelessWidget {
@@ -15,7 +17,9 @@ class PageSection extends StatelessWidget {
           iconData: Icons.home,
           label: 'Início',
           onTap: () {
-         
+           Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => const HomePageView(),),);
           },
           highLighted: true,
         ),
@@ -40,7 +44,11 @@ class PageSection extends StatelessWidget {
         PageTile(
           iconData: Icons.storefront,
           label: 'Lojas & Serviços',
-          onTap: () {},
+          onTap: () {
+            Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (_) => const CreateView(),),);
+          },
           highLighted: false,
         ),
         PageTile(
