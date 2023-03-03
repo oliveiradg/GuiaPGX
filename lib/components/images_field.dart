@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:guia_pgx/components/image_source_dialog.dart';
 
 class ImagesField extends StatelessWidget {
   const ImagesField({Key? key}) : super(key: key);
@@ -17,10 +18,14 @@ class ImagesField extends StatelessWidget {
         itemBuilder: (_, index) {
           return GestureDetector(
               onTap: () {
-                if (Platform.isAndroid) {
-                  showModalBottomSheet(context: context, builder:   );
-                }else{
-                  showCupertinoModalPopup(context: context, builder: null);
+                if (!Platform.isAndroid) {
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (_) => const ImageSourceDialog());
+                } else {
+                  showCupertinoModalPopup(
+                      context: context,
+                      builder: (_) => const ImageSourceDialog());
                 }
               },
               child: Padding(
