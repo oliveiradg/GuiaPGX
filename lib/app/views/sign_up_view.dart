@@ -65,6 +65,7 @@ class SignUpView extends StatelessWidget {
                     keyboardType: TextInputType.phone,
                     inputFormatters: [
                       FilteringTextInputFormatter.digitsOnly,
+                      
                     ],
                   ),
                   const SizedBox(

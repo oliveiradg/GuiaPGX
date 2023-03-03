@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:guia_pgx/components/custom_drawer/custom_drawer.dart';
 
 class CreateView extends StatelessWidget {
@@ -23,12 +24,45 @@ class CreateView extends StatelessWidget {
           children:  [
             TextFormField(
               decoration: const InputDecoration(
-                hintText: 'Titulo*',
+            labelText: 'Titulo*',
                 
-                border: OutlineInputBorder(),
-                isDense: true,
+             
+                
               ),
-              keyboardType: TextInputType.emailAddress,
+         
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                labelText: 'Descrição*',
+                
+                
+              
+              ),
+              maxLines: null,
+         
+            ),
+            //Categoria
+
+            //CEP
+
+            //Preço
+            TextFormField(
+              decoration: const InputDecoration(
+             labelText: 'Preço*',
+                
+             
+               
+                prefixText: 'R\$ ',
+               
+              ),
+              keyboardType: TextInputType.number, 
+              inputFormatters: [
+                FilteringTextInputFormatter.digitsOnly,
+             
+
+
+              ],
+         
             ),
             
 
