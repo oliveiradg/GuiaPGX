@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:guia_pgx/components/custom_drawer/custom_drawer.dart';
+import 'package:guia_pgx/components/images_field.dart';
 
 class CreateView extends StatelessWidget {
   const CreateView({Key? key}) : super(key: key);
@@ -22,6 +23,12 @@ class CreateView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children:  [
+            //Imagens
+           
+           const ImagesField(),
+
+
+
             TextFormField(
               decoration: const InputDecoration(
             labelText: 'Titulo*',
@@ -42,6 +49,8 @@ class CreateView extends StatelessWidget {
          
             ),
             //Categoria
+           
+            
 
             //CEP
 
