@@ -1,6 +1,6 @@
 # guia_pgx
 
-A new Flutter project.
+Guia Comercial Desenvolvido em Flutter .
 
 ## Getting Started
 
