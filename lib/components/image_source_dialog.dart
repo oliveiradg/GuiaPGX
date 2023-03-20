@@ -8,57 +8,51 @@ class ImageSourceDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if(!Platform.isAndroid) {
+    if (!Platform.isAndroid) {
       return BottomSheet(
-      onClosing: (() {
-        Navigator.of(context).pop();
-      }),
-      builder: (context) => Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          TextButton(
-            onPressed: (() {
-              Navigator.of(context).pop();
-            }),
+        onClosing: (() {
+          Navigator.of(context).pop();
+        }),
+        builder: (context) => Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            TextButton(
+              onPressed: getFromCamera,
+              child: const Text('Câmera'),
+            ),
+            TextButton(
+              onPressed: getFromGallery,
+              child: const Text('Galeria'),
+            ),
+          ],
+        ),
+      );
+    } else {
+      return CupertinoActionSheet(
+        title: const Text('Selecionar foto para o anúncio'),
+        cancelButton: CupertinoActionSheetAction(
+          onPressed: 
+            Navigator.of(context).pop,
+          
+          child: const Text(
+            'Cancelar',
+            style: TextStyle(color: Colors.red),
+          ),
+        ),
+        actions: [
+          CupertinoActionSheetAction(
+            onPressed: getFromCamera,
             child: const Text('Câmera'),
           ),
-          TextButton(
-            onPressed: (() {
-              Navigator.of(context).pop();
-            }),
+          CupertinoActionSheetAction(
+            onPressed: getFromGallery,
             child: const Text('Galeria'),
           ),
         ],
-      ),
-    );
-    } else{
-      return CupertinoActionSheet(
-      title: const Text('Selecionar foto para o anúncio'),
-     
-      cancelButton: CupertinoActionSheetAction(
-        onPressed: (() {
-          Navigator.of(context).pop();
-        }),
-        child: const Text('Cancelar', 
-        style: TextStyle(color: Colors.red),
-        ),
-      ),
-      actions: [
-        CupertinoActionSheetAction(
-          onPressed: (() {
-            Navigator.of(context).pop();
-          }),
-          child: const Text('Câmera'),
-        ),
-        CupertinoActionSheetAction(
-          onPressed: (() {
-            Navigator.of(context).pop();
-          }),
-          child: const Text('Galeria'),
-        ),
-      ],
-    );
+      );
     }
   }
+    void getFromCamera() {}
+    void getFromGallery() {}
 }
