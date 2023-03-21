@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ImageSourceDialog extends StatelessWidget {
   const ImageSourceDialog({Key? key}) : super(key: key);
@@ -32,9 +33,7 @@ class ImageSourceDialog extends StatelessWidget {
       return CupertinoActionSheet(
         title: const Text('Selecionar foto para o anúncio'),
         cancelButton: CupertinoActionSheetAction(
-          onPressed: 
-            Navigator.of(context).pop,
-          
+          onPressed: Navigator.of(context).pop,
           child: const Text(
             'Cancelar',
             style: TextStyle(color: Colors.red),
@@ -53,6 +52,21 @@ class ImageSourceDialog extends StatelessWidget {
       );
     }
   }
-    void getFromCamera() {}
-    void getFromGallery() {}
+
+  Future<void> getFromCamera() async {
+    final pickedFile = await ImagePicker().getImage(source: ImageSource.camera);
+    final image = File(pickedFile!.path);
+    imageSelected(image);
+  }
+
+  Future<void> getFromGallery() async {
+    final pickedFile =
+        await ImagePicker().getImage(source: ImageSource.gallery);
+    final image = File(pickedFile!.path);
+    imageSelected(image);
+  }
+
+  void imageSelected(File image) {
+    print(image.path);
+  }
 }
