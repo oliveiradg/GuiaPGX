@@ -1,34 +1,48 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:guia_pgx/components/image_source_dialog.dart';
+import 'package:guia_pgx/stores/create_store.dart';
 
 class ImagesField extends StatelessWidget {
-  const ImagesField({Key? key}) : super(key: key);
+  final CreateStore createStore;
+  const ImagesField({
+    Key? key,
+    required this.createStore,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-     void onImageSelected(File image){
+    void onImageSelected(File image) {
+      createStore.images.add(image);
       Navigator.of(context).pop();
-     }
+    }
+
     return Container(
       color: Colors.grey[200],
       height: 120,
-      child: ListView.builder(
+      child: Observer(builder:(_){
+          return  ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: 5,
+        itemCount: createStore.images.length + 1,
         itemBuilder: (_, index) {
           return GestureDetector(
               onTap: () {
                 if (!Platform.isAndroid) {
                   showModalBottomSheet(
                       context: context,
-                      builder: (_) => ImageSourceDialog(onImageSelected: (File ) {  },));
+                      builder: (_) => ImageSourceDialog(
+                            onImageSelected: (onImageSelected) ,
+                          ));
                 } else {
                   showCupertinoModalPopup(
                       context: context,
-                      builder: (_) =>  ImageSourceDialog(onImageSelected: (File ) {  },));
+                      builder: (_) => ImageSourceDialog(
+                            onImageSelected: (onImageSelected),
+                          ));
                 }
               },
               child: Padding(
@@ -53,7 +67,8 @@ class ImagesField extends StatelessWidget {
                 ),
               ));
         },
-      ),
+          );
+      })
     );
   }
 }

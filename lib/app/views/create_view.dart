@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:guia_pgx/components/custom_drawer/custom_drawer.dart';
 import 'package:guia_pgx/components/images_field.dart';
+import 'package:guia_pgx/stores/create_store.dart';
 
 class CreateView extends StatelessWidget {
-  const CreateView({Key? key}) : super(key: key);
+  final CreateStore createStore = CreateStore();
+
+   CreateView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,63 +23,38 @@ class CreateView extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
         ),
         elevation: 8,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children:  [
-            //Imagens
-           
-           const ImagesField(),
+        child: Column(mainAxisSize: MainAxisSize.min, children: [
+          //Imagens
 
+          const ImagesField(createStore),
 
-
-            TextFormField(
-              decoration: const InputDecoration(
-            labelText: 'Titulo*',
-                
-             
-                
-              ),
-         
+          TextFormField(
+            decoration: const InputDecoration(
+              labelText: 'Titulo*',
             ),
-            TextFormField(
-              decoration: const InputDecoration(
-                labelText: 'Descrição*',
-                
-                
-              
-              ),
-              maxLines: null,
-         
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              labelText: 'Descrição*',
             ),
-            //Categoria
-           
-            
+            maxLines: null,
+          ),
+          //Categoria
 
-            //CEP
+          //CEP
 
-            //Preço
-            TextFormField(
-              decoration: const InputDecoration(
-             labelText: 'Preço*',
-                
-             
-               
-                prefixText: 'R\$ ',
-               
-              ),
-              keyboardType: TextInputType.number, 
-              inputFormatters: [
-                FilteringTextInputFormatter.digitsOnly,
-             
-
-
-              ],
-         
+          //Preço
+          TextFormField(
+            decoration: const InputDecoration(
+              labelText: 'Preço*',
+              prefixText: 'R\$ ',
             ),
-            
-
-          ]
-        ),
+            keyboardType: TextInputType.number,
+            inputFormatters: [
+              FilteringTextInputFormatter.digitsOnly,
+            ],
+          ),
+        ]),
       ),
     );
   }
