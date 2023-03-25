@@ -47,7 +47,7 @@ class PageSection extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (_) => const CreateView(),),);
+            builder: (_) => CreateView(),),);
           },
           highLighted: false,
         ),

@@ -26,7 +26,7 @@ class CreateView extends StatelessWidget {
         child: Column(mainAxisSize: MainAxisSize.min, children: [
           //Imagens
 
-          const ImagesField(createStore),
+          ImagesField(createStore: createStore),
 
           TextFormField(
             decoration: const InputDecoration(
