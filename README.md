@@ -2,7 +2,10 @@
 
 Guia Comercial Desenvolvido em Flutter .
 
-## Getting Started
+
+## PGX
+
+A PGX é um serviço online que permite ao usuário anunciar e vender produtos novos ou usados no Brasil. Desde carros e imóveis até roupas e eletrônicos, praticamente tudo pode ficar disponível na plataforma, que atua em território nacional com site e app de celular no Android ou iPhone (iOS).
 
 This project is a starting point for a Flutter application.
 
