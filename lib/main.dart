@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Guia Comercial',
         theme: ThemeData(
-          scaffoldBackgroundColor: Colors.blue,
+          scaffoldBackgroundColor: Colors.orange.shade400,
           
-          primaryColor: Colors.blue,
+          primaryColor: Colors.orange.shade400,
           appBarTheme: const AppBarTheme(
             elevation: 0,
           ),
